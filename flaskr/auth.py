@@ -66,7 +66,7 @@ def login():
 
 
 # bp.before_app_first_request注册了一个函数, 在view函数运行之前, 不管什么URL被请求.
-@bp.before_app_first_request
+@bp.before_app_request
 def load_logged_in_user():
     user_id = session.get('user_id')
 
